@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="parentBorderPane" minHeight="614.0" minWidth="424.0" prefHeight="657.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PrimusForPC.PhiRatioWindowController">
+   <center>
+      <ScrollPane>
+         <content>
+            <AnchorPane id="AnchorPane" prefWidth="0.0" style="-fx-background-color: #fefefe;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefWidth="617.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter a number in only one field">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="50.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="435.0" spacing="18.0" style="-fx-border-color: #000000;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="66.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A+B">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXTextField fx:id="ABInput" alignment="CENTER" promptText="Number" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="78.0" prefWidth="13.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="66.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXTextField fx:id="AInputLeft" alignment="CENTER" promptText="Number" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="78.0" prefWidth="13.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="66.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXTextField fx:id="AInputRight" alignment="CENTER" promptText="Number" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="78.0" prefWidth="13.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="66.0" spacing="15.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXTextField fx:id="BInput" alignment="CENTER" promptText="Number" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="35.0" right="35.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="326.0" spacing="30.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Decimal Places:" />
+                              <ComboBox fx:id="decimalDropdown" onAction="#setDecimalPrecision" prefHeight="27.0" prefWidth="91.0" promptText="Number" style="-fx-background-color: #ffffff; -fx-border-color: #ededed;" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="617.0" spacing="30.0">
+                           <children>
+                              <JFXButton fx:id="clearButton" buttonType="RAISED" onAction="#clearInputs" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #ff5712; -fx-background-radius: 100;" text="Clear Inputs" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="calculateButton" buttonType="RAISED" onAction="#calculateRatios" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: #ff5712; -fx-background-radius: 100;" text="Calculate" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Line endX="100.0" startX="-100.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Line>
+                        <Text fx:id="answerText" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer Text" textAlignment="CENTER" wrappingWidth="433.2490234375">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Text>
+                        <Line endX="100.0" startX="-100.0">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Line>
+                        <HBox prefHeight="222.0" prefWidth="617.0">
+                           <children>
+                              <VBox prefHeight="226.0" prefWidth="306.0">
+                                 <children>
+                                    <Pane prefHeight="146.0" prefWidth="303.0">
+                                       <children>
+                                          <Text layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ratio Key" />
+                                          <Rectangle fill="#ffa600" height="26.0" layoutX="15.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="264.0" />
+                                          <Rectangle fill="#ff5900" height="38.0" layoutX="15.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="174.0" />
+                                          <Rectangle fill="#ff2323" height="38.0" layoutX="189.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="90.0" />
+                                          <Text layoutX="195.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B" textAlignment="CENTER" wrappingWidth="77.13671875" />
+                                          <Text layoutX="21.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A " textAlignment="CENTER" wrappingWidth="163.13671875" />
+                                          <Text layoutX="25.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A + B" textAlignment="CENTER" wrappingWidth="263.13671875" />
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="160.0" prefWidth="309.0">
+                                       <children>
+                                          <Text layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Ratio" />
+                                          <Rectangle fill="#ffa600" height="39.0" layoutX="15.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="264.0" />
+                                          <Rectangle fill="#ff5900" height="38.0" layoutX="15.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="174.0" />
+                                          <Rectangle fill="#ff2323" height="38.0" layoutX="189.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="90.0" />
+                                          <TextArea fx:id="mainRatioAB" editable="false" layoutX="15.0" layoutY="34.0" minHeight="22.0" prefHeight="39.0" prefWidth="265.0" stylesheets="@TransparentTextField.css" text="A+B" />
+                                          <TextArea fx:id="mainRatioA" editable="false" layoutX="22.0" layoutY="72.0" minHeight="22.0" prefHeight="38.0" prefWidth="160.0" stylesheets="@TransparentTextField.css" text="A" />
+                                          <TextArea fx:id="mainRatioB" editable="false" layoutX="189.0" layoutY="70.0" minHeight="22.0" prefHeight="43.0" prefWidth="91.0" stylesheets="@TransparentTextField.css" text="B" />
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="323.0" prefWidth="313.0">
+                                 <children>
+                                    <Pane prefHeight="160.0" prefWidth="313.0">
+                                       <children>
+                                          <Text fx:id="largerRatioTitle" layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Larger Ratio" />
+                                          <Rectangle fill="#5ecf17" height="39.0" layoutX="15.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="264.0" />
+                                          <Rectangle fill="#faff00" height="38.0" layoutX="15.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="174.0" />
+                                          <Rectangle fill="#3bff26" height="38.0" layoutX="189.0" layoutY="71.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="90.0" />
+                                          <TextArea fx:id="largeRatioAB" editable="false" layoutX="15.0" layoutY="33.0" minHeight="22.0" prefHeight="39.0" prefWidth="265.0" stylesheets="@TransparentTextField.css" text="A+B" />
+                                          <TextArea fx:id="largeRatioA" editable="false" layoutX="23.0" layoutY="71.0" minHeight="22.0" prefHeight="41.0" prefWidth="160.0" stylesheets="@TransparentTextField.css" text="A" />
+                                          <TextArea fx:id="largeRatioB" editable="false" layoutX="189.0" layoutY="69.0" minHeight="22.0" prefHeight="43.0" prefWidth="91.0" stylesheets="@TransparentTextField.css" text="B" />
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="160.0" prefWidth="303.0">
+                                       <children>
+                                          <Text fx:id="smallerRatioTitle" layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smaller Ratio" />
+                                          <Rectangle fill="#5ecf17" height="39.0" layoutX="15.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="264.0" />
+                                          <Rectangle fill="#faff00" height="38.0" layoutX="15.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="174.0" />
+                                          <Rectangle fill="#3bff26" height="38.0" layoutX="189.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.3" width="90.0" />
+                                          <TextArea fx:id="smallRatioAB" editable="false" layoutX="15.0" layoutY="33.0" minHeight="22.0" prefHeight="39.0" prefWidth="265.0" stylesheets="@TransparentTextField.css" text="A+B" />
+                                          <TextArea fx:id="smallRatioA" editable="false" layoutX="22.0" layoutY="70.0" minHeight="22.0" prefHeight="41.0" prefWidth="160.0" stylesheets="@TransparentTextField.css" text="A" />
+                                          <TextArea fx:id="smallRatioB" editable="false" layoutX="189.0" layoutY="70.0" minHeight="22.0" prefHeight="43.0" prefWidth="91.0" stylesheets="@TransparentTextField.css" text="B" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="27.0" prefWidth="550.0" style="-fx-background-color: #ff5712;" BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Go Back">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#goToMainInterface" text="Back to Main Primus Interface" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#goToWebsite" text="Go to website" />
+            </items>
+          </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </MenuBar>
+   </top>
+</BorderPane>
